@@ -967,3 +967,76 @@ body.light-mode .btn-secondary:hover {
     height: 100%;
     object-fit: cover;
 }
+
+/* Scrollable Skill Table */
+.skill-table-container {
+    max-height: 300px;
+    overflow-y: auto;
+    text-align: left;
+    margin-top: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.2);
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) rgba(255, 255, 255, 0.1);
+}
+
+.skill-table-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.skill-table-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.skill-table-container::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+.skill-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.skill-table th,
+.skill-table td {
+    padding: 16px;
+    text-align: left;
+    font-size: 0.95rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skill-table th {
+    color: var(--primary-color);
+    position: sticky;
+    top: -2PX;
+    background: var(--bg-color);
+    z-index: 10;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.skill-table td {
+    color: var(--text-secondary);
+}
+
+.skill-table tr:hover td {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Remove side borders for a cleaner look if desired, or keep them for 'grid' look */
+.skill-table tr:first-child th:first-child {
+    border-top-left-radius: 0;
+}
+
+.skill-table tr:first-child th:last-child {
+    border-top-right-radius: 0;
+}
